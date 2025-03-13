@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pastebin-app
+  labels:
+    app: pastebin
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pastebin
+  template:
+    metadata:
+      labels:
+        app: pastebin
+    spec:
+      containers:
+        - name: pastebin-container
+          image: <AWS_ECR_REPO>:latest  # Replace with your ECR repo
+          ports:
+            - containerPort: 8000
