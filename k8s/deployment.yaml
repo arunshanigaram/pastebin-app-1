@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: pastebin-container
-          image: 061039783209.dkr.ecr.us-east-2.amazonaws.com/pastebin-app # Replace with your ECR repo
+          image: 061039783209.dkr.ecr.us-east-2.amazonaws.com/pastebin-app:latest # Replace with your ECR repo
           ports:
             - containerPort: 8000
